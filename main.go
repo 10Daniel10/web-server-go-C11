@@ -27,6 +27,29 @@ var (
 )
 
 func main() {
+
+	// Agregar productos de prueba
+	products = []Product{
+		{
+			ID:          1,
+			Name:        "Cheese - St. Andre",
+			Quantity:    60,
+			CodeValue:   "S73191A",
+			IsPublished: true,
+			Expiration:  "12/04/2022",
+			Price:       50.15,
+		},
+		{
+			ID:          2,
+			Name:        "Apples",
+			Quantity:    100,
+			CodeValue:   "A12345",
+			IsPublished: true,
+			Expiration:  "25/12/2022",
+			Price:       1.99,
+		},
+	}
+
 	router := gin.Default()
 
 	// Ruta para agregar un producto (POST)
